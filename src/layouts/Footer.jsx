@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <footer>
             {/* Main Footer */}
-            <div className='w-full p-10 md:p-16 lg:p-24 bg-[#01100D] flex flex-col lg:flex-row lg:justify-between gap-10'>
+            <div className='w-full px-6 md:px-16 lg:px-28 py-16 md:py-24 lg:py-32 bg-[#01100D] flex flex-col lg:flex-row lg:justify-between gap-10'>
                 {/* Company Information */}
                 <div className="flex flex-col gap-4 w-full lg:w-1/3">
                     <Link
