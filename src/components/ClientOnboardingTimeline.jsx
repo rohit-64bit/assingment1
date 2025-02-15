@@ -23,11 +23,11 @@ const ClientOnboardingTimeline = () => {
                     }}
                     contentArrowStyle={{ borderRight: "7px solid rgba(255, 255, 255, 0.2)" }}
                     iconStyle={{
-                        background: "rgba(255, 255, 255, 0.1)",
-                        backdropFilter: "blur(10px)",
+                        background: "#09534B",
+                        // backdropFilter: "blur(10px)",
                         border: "1px solid rgba(255, 255, 255, 0.2)",
-                        boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.2)",
-                        color: "#fff",
+                        boxShadow: "0px 0px 1px rgba(255, 255, 255, 0.2)",
+                        color: "#E8BF6A",
                         display: "flex",
                         fontSize: "24px",
                         borderRadius: "50%",
@@ -36,7 +36,7 @@ const ClientOnboardingTimeline = () => {
                     }}
                     icon={step.icon}
                 >
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white">{step.title}</h3>
+                    <h3 className="text-lg font-bold text-[#E8BF6A] dark:text-[#E8BF6A]">{step.title}</h3>
                     <p className="text-gray-700 dark:text-gray-300 text-sm">{step.description}</p>
                 </VerticalTimelineElement>
             ))}

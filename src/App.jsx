@@ -11,6 +11,8 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
+import OurWork from './pages/OurWork';
+import ScrollToTop from './utils/ScrollToTop';
 
 const App = () => {
   return (
@@ -18,8 +20,11 @@ const App = () => {
 
       <Header />
 
+      <ScrollToTop />
+
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/our-work' element={<OurWork />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
 

@@ -23,7 +23,7 @@ const ServiceDetails = ({ data }) => {
     return (
         <motion.div
             ref={cardRef}
-            className="relative w-full bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl shadow-lg flex flex-col gap-5 p-10 overflow-hidden"
+            className="relative w-full bg-white/5 backdrop-blur-md border border-white/20 text-white rounded-xl shadow-lg flex flex-col justify-between gap-5 p-10 overflow-hidden"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
@@ -41,17 +41,22 @@ const ServiceDetails = ({ data }) => {
                 />
             )}
 
-            <div className="w-max bg-white/10 border border-white/20 text-white rounded-xl shadow-lg flex flex-col gap-5 p-5">
-                <data.icon className='text-3xl text-slate-400' />
+            <div className=''>
+
+                <div className="w-max bg-[#09534B] rounded-xl shadow-lg flex flex-col gap-5 p-5">
+                    <data.icon className='text-3xl text-[#E8BF6A]' />
+                </div>
+
+                <p className='text-2xl mt-5'>
+                    {data.title}
+                </p>
+
             </div>
 
-            <p className='text-2xl'>
-                {data.title}
-            </p>
-
-            <p className='text-white/70 '>
+            <p className='text-white/70 text-sm'>
                 {data.description}
             </p>
+
 
         </motion.div>
     )

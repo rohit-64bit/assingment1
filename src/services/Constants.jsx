@@ -9,7 +9,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import { FaUserCheck, FaClipboardList, FaCode, FaServer, FaRocket } from "react-icons/fa";
+import { FaUserCheck, FaClipboardList, FaCode, FaServer, FaRocket, FaEnvelope, FaPhone, FaLocationArrow } from "react-icons/fa";
 import img1 from '../assets/partners/image 1.png'
 import img2 from '../assets/partners/image 2.png'
 import img3 from '../assets/partners/image 3.png'
@@ -25,6 +25,14 @@ import img12 from '../assets/partners/image 12.png'
 import img13 from '../assets/partners/image 13.png'
 import img14 from '../assets/partners/image 14.png'
 import img15 from '../assets/partners/image 15.png'
+
+import AkshatImg from '../assets/team/akshat.jpeg'
+import AshitaImg from '../assets/team/ashita dp.jpeg'
+import NisheethImg from '../assets/team/nisheeth do.jpeg'
+import UtkarshImg from '../assets/team/utkarsh dp.jpeg'
+import SiddharthImg from '../assets/team/sid dp.jpeg'
+import AasthaImg from '../assets/team/astha dp.jpeg'
+
 
 export const navRoutes = [
     {
@@ -43,6 +51,11 @@ export const navRoutes = [
         isHashLink: true
     },
     {
+        name: 'Our Work',
+        link: '/our-work',
+        isHashLink: false
+    },
+    {
         name: 'Why Us',
         link: '/#testimonials',
         isHashLink: true
@@ -54,38 +67,56 @@ export const navRoutes = [
     }
 ]
 
+// export const serviceData = [
+//     {
+//         title: 'Data Analytics',
+//         description: 'We provide data analytics services to help you make informed decisions.',
+//         icon: FaChartBar
+//     },
+//     {
+//         title: 'API Integration',
+//         description: 'We provide API integration services to help you connect your applications.',
+//         icon: TbPlugConnected
+//     },
+//     {
+//         title: 'Security',
+//         description: 'We provide security services to help you secure your applications.',
+//         icon: GrSecure
+//     },
+//     {
+//         title: 'Software Development',
+//         description: 'We provide software development services to help you build your applications.',
+//         icon: IoCodeWorking
+//     },
+//     {
+//         title: 'Marketing',
+//         description: 'We provide marketing services to help you promote your applications.',
+//         icon: HiSpeakerphone
+//     },
+//     {
+//         title: 'Deployment',
+//         description: 'We provide deployment services to help you deploy your applications.',
+//         icon: MdFolderZip
+//     }
+// ]
+
 export const serviceData = [
     {
-        title: 'Data Analytics',
-        description: 'We provide data analytics services to help you make informed decisions.',
-        icon: FaChartBar
-    },
-    {
-        title: 'API Integration',
-        description: 'We provide API integration services to help you connect your applications.',
-        icon: TbPlugConnected
-    },
-    {
-        title: 'Security',
-        description: 'We provide security services to help you secure your applications.',
-        icon: GrSecure
-    },
-    {
-        title: 'Software Development',
-        description: 'We provide software development services to help you build your applications.',
+        title: 'On Demand Talent',
+        description: 'Need skilled professionals for short-term projects? Our pool of pre-vetted experts can help with a wide range of technologies and domains, from software development to cloud architecture. Whether you need one developer or an entire team, we have you covered.',
         icon: IoCodeWorking
     },
     {
-        title: 'Marketing',
-        description: 'We provide marketing services to help you promote your applications.',
-        icon: HiSpeakerphone
+        title: 'Dedicated Team',
+        description: 'We provide long-term, integrated teams that become a part of your company. These teams work within your existing processes, ensuring smooth collaboration and the flexibility to scale as needed. With our concierge tech lead, your team is continuously supported and optimized for success.',
+        icon: GrSecure
     },
     {
-        title: 'Deployment',
-        description: 'We provide deployment services to help you deploy your applications.',
-        icon: MdFolderZip
+        title: 'IT Consulting',
+        description: 'Our experts advise businesses on how to align technology with their strategic goals. We guide you through digital transformation, system integration, software architecture, and cloud adoption.',
+        icon: IoCodeWorking
     }
-]
+];
 
 export const testimonialData = [
     {
@@ -155,78 +186,111 @@ export const partnersData = [
 
 export const footerLinks = [
     {
-        title: 'Home',
+        title: 'Company',
         links: [
-            {
-                name: 'About Us',
-                link: '/#about'
-            },
-            {
-                name: 'Services',
-                link: '/#services'
-            },
-            {
-                name: 'Why Us',
-                link: '/#testimonials'
-            },
-            {
-                name: 'Contact Us',
-                link: '/#contact'
-            }
+            { name: 'About Us', link: '/#about' },
+            { name: 'Services', link: '/#services' },
+            { name: 'Our Work', link: '/our-work' },
+            { name: 'Why Us', link: '/#testimonials' }
         ]
     },
     {
-        title: 'Services',
+        title: 'Resources',
         links: [
-            {
-                name: 'Data Analytics',
-                link: '/#services'
-            },
-            {
-                name: 'API Integration',
-                link: '/#services'
-            },
-            {
-                name: 'Security',
-                link: '/#services'
-            },
-            {
-                name: 'Software Development',
-                link: '/#services'
-            },
-            {
-                name: 'Marketing',
-                link: '/#services'
-            },
-            {
-                name: 'Deployment',
-                link: '/#services'
-            }
+            // { name: 'Blog', link: '/blog' },
+            // { name: 'Case Studies', link: '/case-studies' },
+            // { name: 'Whitepapers', link: '/whitepapers' },
+            { name: 'FAQs', link: '/faqs' }
         ]
     },
     {
-        title: 'Contact Us',
+        title: 'Support',
         links: [
-            {
-                name: 'Email',
-                link: 'mailto:'
-            },
-            {
-                name: 'Phone',
-                link: 'tel:'
-            },
-            {
-                name: 'Address',
-                link: 'https://www.google.com/maps/search/'
-            }
+            { name: 'Contact Us', link: '/#contact' },
+            // { name: 'Privacy Policy', link: '/privacy-policy' },
+            // { name: 'Terms of Service', link: '/terms-of-service' },
+            // { name: 'Sitemap', link: '/sitemap' }
         ]
     }
 ]
 
 export const onboardingSteps = [
-    { title: "Initial Contact", description: "Understanding client needs & project requirements.", date: "Step 1", icon: <FaUserCheck /> },
-    { title: "Proposal & Agreement", description: "Presenting a proposal, finalizing budget, and signing the agreement.", date: "Step 2", icon: <FaClipboardList /> },
-    { title: "Development Phase", description: "Design, development, and client feedback iterations.", date: "Step 3", icon: <FaCode /> },
-    { title: "Testing & Deployment", description: "QA testing, client approval, and live deployment.", date: "Step 4", icon: <FaServer /> },
-    { title: "Project Handover & Support", description: "Final documentation, training, and ongoing support.", date: "Step 5", icon: <FaRocket /> },
+    { title: "Consultation", description: "We start by understanding your unique needs, challenges, and business goals. This allows us to tailor our services to fit your exact requirements.", date: "", icon: <FaUserCheck /> },
+    { title: "Talent Matching", description: "Once we understand your needs, we connect you with the right professionals or teams who are equipped to deliver the solutions you require.", date: "", icon: <FaClipboardList /> },
+    { title: "Integration", description: "We ensure that the resources we provide integrate smoothly into your workflows. From day one, our concierge service ensures that your team is continuously supported and optimized for success.", date: "", icon: <FaCode /> },
+    { title: "Support", description: "Our tech lead remains actively involved with your team, addressing any challenges and providing the ongoing guidance necessary to ensure long-term success.", date: "", icon: <FaServer /> }
+];
+
+export const stats = [
+    { number: "100+", label: "Projects Completed" },
+    { number: "120+", label: "Happy Clients" },
+    { number: "50+", label: "Team Members" },
+    { number: "10+", label: "Years in Business" }
+];
+
+export const contactInfo = [
+    {
+        name: 'Email Us',
+        desk: 'admin@techsectra.com',
+        link: 'mailto:admin@techsectra.com',
+        icon: FaEnvelope
+    },
+    {
+        name: '24/7 Support',
+        desk: '+91 9131965709',
+        link: 'tel:+919131965709',
+        icon: FaPhone
+    },
+    {
+        name: 'Address',
+        desk: '102/109, 3rd Cross Rd, Sector 2, PWD Quarters, 1st Sector, HSR Layout, Bengaluru, Karnataka 560102, India',
+        link: 'https://www.google.com/maps/search/',
+        icon: FaLocationArrow
+    }
+]
+
+export const teamData = [
+    {
+        quote:
+            "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
+        name: "Akshat Jain  ",
+        designation: "(CEO) ex Kotak securities",
+        img: AkshatImg,
+    },
+    {
+        quote:
+            "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
+        name: "Ashita Jain",
+        designation: " (Co-Founder) - ex walmart",
+        img: AshitaImg,
+    },
+    {
+        quote:
+            "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
+        name: "Nisheeth Agarwal",
+        designation: " (Backend Concierge) - tech lead gupshup",
+        img: NisheethImg,
+    },
+    {
+        quote:
+            "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
+        name: "Utkarsh Choubey  ",
+        designation: "(Frontend Concierge) - tech lead harness",
+        img: UtkarshImg,
+    },
+    {
+        quote:
+            "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+        name: "Siddharth Shukla",
+        designation: " (Automation Concierge) Senior Member Technical DE Shaw ",
+        img: SiddharthImg,
+    },
+    {
+        quote:
+            "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
+        name: "Aastha Vyas ",
+        designation:
+            "(Product management Concierge) Technical Account Manager Google ",
+        img: AshitaImg,
+    },
 ];

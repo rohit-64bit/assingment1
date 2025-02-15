@@ -45,16 +45,17 @@ const Header = () => {
     }, []);
 
     return (
-        <div className='w-full flex items-center justify-center'>
 
-            <header className="fixed top-0 mt-5 w-[97%] flex justify-between items-center py-4 px-20 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl shadow-lg z-20">
+        <header className={!scrolling ? "fixed top-0 w-full flex justify-between items-center py-4 px-28 bg-[#01100D]/70 backdrop-blur-md border-b border-white/20 text-white shadow-lg z-[1000] translate-y-0 duration-1000" : "fixed top-0 w-full flex justify-between items-center py-4 px-28 bg-[#01100D]/70 backdrop-blur-md border-b border-white/20 text-white shadow-lg z-[1000] -translate-y-30 duration-1000"}>
 
-                <Link
-                    to='/'
-                    className='font-bold text-xl'
-                >
-                    ByteDev.in
-                </Link>
+            <Link
+                to='/'
+                className='font-medium text-xl'
+            >
+                Techsectra.com
+            </Link>
+
+            <div className='flex gap-10 items-center'>
 
                 <nav className='flex gap-5'>
 
@@ -65,7 +66,7 @@ const Header = () => {
                                 <HashLink
                                     to={route.link}
                                     key={index}
-                                    className='text-lg duration-300 hover:text-blue-500 font-medium'
+                                    className='text-lg duration-300 hover:text-[#E8BF6A] font-medium'
                                 >
                                     {route.name}
                                 </HashLink>
@@ -73,7 +74,7 @@ const Header = () => {
                                 <Link
                                     to={route.link}
                                     key={index}
-                                    className='text-lg duration-300 hover:text-blue-500 font-medium'
+                                    className='text-lg duration-300 hover:text-[#E8BF6A] font-medium'
                                 >
                                     {route.name}
                                 </Link>
@@ -82,13 +83,13 @@ const Header = () => {
 
                 </nav>
 
-                <HashLink className='border border-white/20 hover:border-blue-500 hover:bg-white hover:text-black px-10 py-2 rounded-xl duration-300 font-semibold' to='/#get-started'>
+                <HashLink className='border border-white/20 hover:border-green-400 hover:bg-[#E8BF6A] hover:text-black px-10 py-2 rounded-xl duration-300 font-semibold' to='/#get-started'>
                     Get Started
                 </HashLink>
 
-            </header>
+            </div>
 
-        </div>
+        </header>
     )
 }
 

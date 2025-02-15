@@ -23,7 +23,7 @@ const TestimonialCard = ({ data }) => {
     return (
         <motion.div
             ref={cardRef}
-            className="w-full bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl shadow-lg flex flex-col p-10"
+            className="w-full bg-white/5 backdrop-blur-md border border-white/20 text-white rounded-xl shadow-lg flex flex-col p-10"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
         >
